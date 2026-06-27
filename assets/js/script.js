@@ -2,17 +2,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ================= MOBILE MENU =================
   const menuBtn = document.getElementById("menuBtn");
+  const menuIcon = document.getElementById("menuIcon");
   const mobileMenu = document.getElementById("mobileMenu");
   const overlay = document.getElementById("overlay");
 
   function openMenu() {
     mobileMenu.classList.remove("hidden");
     overlay.classList.remove("hidden");
+
+    // change icon to X
+    if (menuIcon) {
+      menuIcon.classList.remove("fa-bars");
+      menuIcon.classList.add("fa-xmark");
+    }
   }
 
   function closeMenu() {
     mobileMenu.classList.add("hidden");
     overlay.classList.add("hidden");
+
+    // change icon back to bars
+    if (menuIcon) {
+      menuIcon.classList.remove("fa-xmark");
+      menuIcon.classList.add("fa-bars");
+    }
   }
 
   if (menuBtn && mobileMenu && overlay) {
@@ -29,7 +42,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     overlay.addEventListener("click", closeMenu);
 
-    document.querySelectorAll(".mobile-link").forEach(link => {
+    // FIXED: class name corrected (mobile-links)
+    document.querySelectorAll(".mobile-links").forEach(link => {
       link.addEventListener("click", closeMenu);
     });
 

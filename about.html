@@ -9,14 +9,18 @@
 
   <!-- ================= CSS ================= -->
   <link rel="stylesheet" href="./css/output.css">
+
+  <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body>
 
-<!-- ================= NAVBAR START ================= -->
+ <!-- ================= NAVBAR START ================= -->
 <header class="sticky top-0 left-0 w-full z-[100] bg-white/90 backdrop-blur-md shadow-md border-b border-green-100">
 
-  <nav class="w-full flex items-center justify-between px-6 md:px-12 lg:px-16 py-4">
+  <nav class="w-full flex items-center justify-between gap-6 px-6 md:px-12 lg:px-16 py-4">
 
     <!-- ================= LOGO SECTION ================= -->
     <div class="flex items-center gap-3 flex-shrink-0">
@@ -32,15 +36,16 @@
           OTANDA COAL CITY LIMITED
         </h1>
 
-        <p class="hidden xl:block text-xs text-gray-600">
+        <!-- Subtitle FIXED -->
+        <p class="hidden md:block text-xs text-gray-600">
           Real Estate • Construction • Property Management
         </p>
       </div>
 
     </div>
 
-    <!-- DESKTOP NAV -->
-    <ul class="hidden md:flex items-center gap-6 text-[15px] font-medium text-gray-700">
+    <!-- DESKTOP NAV (ONLY LG AND ABOVE) -->
+    <ul class="hidden lg:flex items-center gap-6 text-[15px] font-medium text-gray-700">
 
       <li><a href="index.html" class="desktop-links">Home</a></li>
       <li><a href="about.html" class="desktop-links">About</a></li>
@@ -52,10 +57,10 @@
 
     </ul>
 
-    <!-- MOBILE BUTTON -->
-    <button id="menuBtn" class="md:hidden text-3xl text-prim-col">
-      ☰
+    <button id="menuBtn" class="lg:hidden text-2xl text-prim-col">
+      <i id="menuIcon" class="fa-solid fa-bars"></i>
     </button>
+
 
   </nav>
 
@@ -82,8 +87,6 @@
 
 </header>
 <!-- ================= NAVBAR END ================= -->
-
-
 
 
   <!-- ================= ABOUT SECTION START ================= -->
